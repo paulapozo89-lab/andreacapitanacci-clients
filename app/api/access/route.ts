@@ -16,8 +16,8 @@ export async function POST(req: Request) {
   const slug = typeof body.slug === "string" ? body.slug : "";
   const typed = typeof body.password === "string" ? body.password.trim() : "";
   const gallery = getGallery(slug);
-  const secret = process.env.GALLERY_SECRET;
   const password = gallery ? process.env[gallery.passwordEnv] : undefined;
+  const secret = process.env.GALLERY_SECRET || password;
 
   // La clave no distingue mayúsculas para que el cliente no se atore al teclearla.
   if (!gallery || !secret || !password || !typed || !safeEqual(typed.toUpperCase(), password.toUpperCase())) {

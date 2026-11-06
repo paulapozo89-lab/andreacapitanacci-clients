@@ -11,8 +11,8 @@ function toHex(buf: ArrayBuffer): string {
 }
 
 /**
- * Token de acceso = HMAC(secreto, slug:clave).
- * Si se cambia la clave o el secreto en Vercel, todos los accesos anteriores dejan de valer.
+ * Token de acceso = HMAC(secreto, slug:clave). El secreto es opcional (GALLERY_SECRET);
+ * sin él se usa la propia clave como llave. Cambiar la clave invalida todos los accesos anteriores.
  */
 export async function accessToken(slug: string, password: string, secret: string): Promise<string> {
   const key = await crypto.subtle.importKey("raw", enc.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
@@ -28,8 +28,8 @@ export function safeEqual(a: string, b: string): boolean {
 }
 
 export async function isAuthorized(slug: string, passwordEnv: string, cookieValue: string | undefined): Promise<boolean> {
-  const secret = process.env.GALLERY_SECRET;
   const password = process.env[passwordEnv];
+  const secret = process.env.GALLERY_SECRET || password;
   if (!secret || !password || !cookieValue) return false;
   return safeEqual(cookieValue, await accessToken(slug, password, secret));
 }

@@ -6,7 +6,8 @@ Proyecto independiente del sitio principal (`andreacapitanacci`): cambios aquí 
 ## Cómo funciona el acceso
 - Cada galería pide una clave. La clave vive en Vercel como variable de entorno `GALLERY_PASSWORD_<CLIENTE>`.
 - Al entrar, se guarda una cookie firmada por 30 días. Sin esa cookie, ninguna foto de `/g/<cliente>/` se entrega (responde 404), aunque se tenga el link directo.
-- `GALLERY_SECRET` firma las cookies. Si se cambia la clave o el secreto, todos los accesos anteriores se invalidan.
+- Si se cambia la clave en Vercel (y se vuelve a desplegar), todos los accesos anteriores se invalidan.
+- Opcional: `GALLERY_SECRET` agrega una llave extra para firmar las cookies.
 - Las galerías no se indexan en buscadores.
 
 ## Agregar un cliente nuevo
