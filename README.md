@@ -19,4 +19,4 @@ Proyecto independiente del sitio principal (`andreacapitanacci`): cambios aquí 
 ## Galerías activas
 | Cliente | URL | Fotos | Entregada |
 |---|---|---|---|
-| Izaguirre Law Firm | /izaguirre | 40 | Nov 2026 |
+| Izaguirre Law Firm | /izaguirre | 48 | Nov 2026 |

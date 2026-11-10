@@ -165,6 +165,12 @@
      "w": 2731,
      "h": 4096,
      "bytes": 1940603
+    },
+    {
+     "name": "Izaguirre_Coworking_05",
+     "w": 2062,
+     "h": 2576,
+     "bytes": 577641
     }
    ]
   },
@@ -207,6 +213,18 @@
      "w": 2731,
      "h": 4096,
      "bytes": 1659474
+    },
+    {
+     "name": "Izaguirre_TeamIndividual_07",
+     "w": 2062,
+     "h": 2576,
+     "bytes": 542508
+    },
+    {
+     "name": "Izaguirre_TeamIndividual_08",
+     "w": 2062,
+     "h": 2576,
+     "bytes": 621788
     }
    ]
   },
@@ -243,6 +261,12 @@
      "w": 4096,
      "h": 2731,
      "bytes": 2049430
+    },
+    {
+     "name": "Izaguirre_FullTeam_06",
+     "w": 2576,
+     "h": 1718,
+     "bytes": 544916
     }
    ]
   },
@@ -273,6 +297,30 @@
      "w": 2731,
      "h": 4096,
      "bytes": 1848252
+    },
+    {
+     "name": "Izaguirre_AtWork_05",
+     "w": 2576,
+     "h": 1718,
+     "bytes": 578127
+    },
+    {
+     "name": "Izaguirre_AtWork_06",
+     "w": 2576,
+     "h": 1718,
+     "bytes": 550082
+    },
+    {
+     "name": "Izaguirre_AtWork_07",
+     "w": 2576,
+     "h": 1718,
+     "bytes": 549646
+    },
+    {
+     "name": "Izaguirre_AtWork_08",
+     "w": 2576,
+     "h": 1718,
+     "bytes": 620329
     }
    ]
   }
